@@ -26,43 +26,17 @@ const Navbar = ({ name }) => {
   return (
     <>
       <div className="navbar">
-        {/* according to time it shows morning, afternoon, evening, and night */}
-        {hour <= 12 ? (
-          <div>
-            Good morning!
-            <br />
-            Seize the day and master your habits.
-          </div>
-        ) : hour <= 17 ? (
-          <div>
-            Afternoon alert!
-            <br />
-            Stay on track with your habits.
-          </div>
-        ) : hour <= 21 ? (
-          <div>
-            Good evening!
-            <br />
-            Elevate your habits and conquer the day.
-          </div>
-        ) : (
-          <div>
-            Nighttime focus!
-            <br />
-            Reflect and level up your habits.
-          </div>
-        )}
-
+        <h3>
+          Habit Tracker~Vivek
+        </h3>
         <div className="right-nav">
-          <div className="navbar-addhabit">
-            <img src={AddHabit} alt="addhabit" />
-          </div>
+          <button className="detail">{name}</button>
           <button
             className="addhabit-btn"
             data-bs-toggle="modal"
             data-bs-target="#staticBackdrop"
           >
-            <i className="fa-solid fa-plus"></i> Add Habits
+           Add Habits
           </button>
         </div>
       </div>
@@ -81,21 +55,21 @@ const Navbar = ({ name }) => {
           <div className="modal-content">
             <div className="modal-header">
               <h5 className="modal-title" id="staticBackdropLabel">
-                Add your habit and keep a track;)
+                Add New Habit
               </h5>
             </div>
             <div className="modal-body">
               <div className="mb-3">
-                <label
-                  htmlFor="exampleInputEmail1"
-                  className="form-label"
-                ></label>
+                <label htmlFor="exampleInputEmail1" className="form-label">
+                 HABIT NAME
+                </label>
                 <input
                   type="text"
                   className="form-control"
                   id="habitName"
                   placeholder="Enter habit name"
                   autoComplete="off"
+                  
                 />
               </div>
             </div>
@@ -105,14 +79,10 @@ const Navbar = ({ name }) => {
                 className="btn btn-secondary"
                 data-bs-dismiss="modal"
               >
-                Cancel
+                Cancel Habit 
               </button>
-              <button
-                type="button"
-                className="btn btn-primary"
-                onClick={handleSave}
-              >
-                Save
+              <button type="button" className="btn btn-primary" onClick={handleSave}>
+                Save Habit
               </button>
             </div>
           </div>
