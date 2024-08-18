@@ -27,7 +27,7 @@ const Navbar = ({ name }) => {
     <>
       <div className="navbar">
         <h3>
-          Habit Tracker~Vivek
+          Habit Tracker~Ankur
         </h3>
         <div className="right-nav">
           <button className="detail">{name}</button>
